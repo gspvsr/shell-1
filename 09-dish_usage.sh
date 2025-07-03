@@ -7,7 +7,7 @@ do
     usage=$(echo $output) | awk '{print $2}' | sed 's/%//g'
     partition=$(echo $output | awk '{print $1}')
 
-    if [ "$usage" -ne "$THRESHOLD" ]; then
+    if [ "$usage" != "$THRESHOLD" ]; then
         echo "usage is more than the normal"
     else:
         echo "usage is normal"
