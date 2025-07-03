@@ -1,6 +1,6 @@
 #!/bin/bash
 
-THRESHOLD=1
+THRESHOLD=10
 
 df -h | grep -vE 'tmpfs|Filesystem' | awk '{print $1 " " $5}' | while read output;
 do
