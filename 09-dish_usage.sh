@@ -12,5 +12,5 @@ do
         echo "usage is more than the normal"
     else:
         echo "usage is normal"
-    Fi
+    fi
 done
