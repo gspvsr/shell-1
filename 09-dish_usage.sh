@@ -2,9 +2,9 @@
 
 THRESHOLD=5
 
-df -h | grep -vE 'tmpfs|Fielsystem' | awk '{print $1 " " $5}' | while read output;
+df -h | grep -vE 'tmpfs|Filesystem' | awk '{print $1 " " $5}' | while read output;
 do
-    usage=$(echo $output | awk '{print $2}') | sed 's/%//g'
+    usage=$(echo $output) | awk '{print $2}' | sed 's/%//g'
     partition=$(echo $output | awk '{print $1}')
 
     if [ "$usage" -gt "$THRESHOLD" ]; then
