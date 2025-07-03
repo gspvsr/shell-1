@@ -9,7 +9,7 @@ do
 
     if [ "$usage" != "$THRESHOLD" ]; then
         echo "usage is more than the normal"
-    else:
+    else
         echo "usage is normal"
     fi
 done
